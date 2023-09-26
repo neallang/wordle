@@ -26,7 +26,7 @@ public class WordValidator {
      * Returns true if the word is the correct length
      */
     protected boolean isCorrectLength(String word) {
-        return word.length() != WORDLE_WORD_LENGTH; //SHOULD BE ==
+        return word.length() == WORDLE_WORD_LENGTH; //SHOULD BE ==
     }
 
     /**
