@@ -37,4 +37,8 @@ class DictionaryTest {
         var WordValidator = new WordValidator();
         assertTrue(WordValidator.isValidWord("hello"));
     }
+    @Test void isAllLetters_shouldBeFalse() {
+        var WordValidator = new WordValidator();
+        assertFalse(WordValidator.isValidWord("hel3lo"));
+    }
 }

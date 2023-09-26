@@ -36,7 +36,7 @@ public class WordValidator {
         word.toLowerCase();
         for (int index = 0; index < word.length(); index++) {
             var character = word.charAt(index);
-            if (character > 'a' || character < 'z') {
+            if (!Character.isLetter(character)) {
                 return false;
             }
         }
