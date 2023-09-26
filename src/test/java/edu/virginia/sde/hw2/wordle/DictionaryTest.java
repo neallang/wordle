@@ -29,8 +29,12 @@ class DictionaryTest {
 //        var wordSet = dictionary.getWordSet();
 //        assertTrue(wordSet.isEmpty());
 //    }
-    @Test void isCorrectLength_shouldBeTrue() {     //this test proved isCorrectLength() was wrong. Now I fix.
+//    @Test void isCorrectLength_shouldBeTrue() {     //this test proved isCorrectLength() was wrong. Now I fix.
+//        var WordValidator = new WordValidator();
+//        assertTrue(WordValidator.isCorrectLength("apple"));
+//    }
+    @Test void isAllLetters_shouldBeTrue() {
         var WordValidator = new WordValidator();
-        assertTrue(WordValidator.isCorrectLength("apple"));
+        assertTrue(WordValidator.isValidWord("hello"));
     }
 }
