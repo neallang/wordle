@@ -41,7 +41,7 @@ public class Dictionary {
         this.wordValidator = wordValidator;
     }
 
-    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {
+    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {    //should check
         for (String word: wordSet) {
             if (!wordValidator.isValidWord(word)) {
                 throw new IllegalArgumentException(
@@ -89,7 +89,7 @@ public class Dictionary {
      *
      * @throws IllegalArgumentException if the word is not valid (see {@link WordValidator#isValidWord(String)}
      */
-    public void addWord(String word) {
+    public void addWord(String word) {          //should check
         if (!wordValidator.isValidWord(word)) {
             throw new IllegalArgumentException(
                     String.format("Cannot add %s to dictionary, as it is invalid for Wordle", word));
@@ -142,7 +142,7 @@ public class Dictionary {
      * Returns true if both dictionaries have the same set of words.
      */
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(Object object) {      //should test
         if (!(object instanceof Dictionary otherDictionary)) {
             return false;
         }

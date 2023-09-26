@@ -21,14 +21,37 @@ class DictionaryTest {
 //        assertTrue(wordSet.contains("black"));
 //        assertTrue(wordSet.contains("camel"));
 //    }
-//
-//    @Test
+// @Test
 //    void getWordSet_initiallyEmpty() {
 //        var dictionary = new Dictionary();
 //
 //        var wordSet = dictionary.getWordSet();
 //        assertTrue(wordSet.isEmpty());
 //    }
+
+//    @Test void constructor_sizeCheck(){
+//        var startingWordSet = new HashSet<>(Set.of("apple"));
+//        var dictionary = new Dictionary(startingWordSet, new WordValidator());
+//        assertEquals(1, dictionary.size());
+//    }
+//@Test void addWord_sizeCheck(){
+//    var startingWordSet = new HashSet<>(Set.of("apple"));
+//    var dictionary = new Dictionary(startingWordSet, new WordValidator());
+//    dictionary.addWord("hello");
+//    assertEquals(2, dictionary.size());
+//}
+//    @Test void addWord_validWord(){
+//        var startingWordSet = new HashSet<>(Set.of("apple"));
+//        var dictionary = new Dictionary(startingWordSet, new WordValidator());
+//        dictionary.addWord("hello3");
+//        assertEquals(1, dictionary.size());
+//    }
+
+
+
+
+
+    //WORDVALIDATOR TESTS
 
 //    @Test void isCorrectLength_shouldBeTrue() {     //this test proved isCorrectLength() was wrong. Now I fix.
 //        var WordValidator = new WordValidator();
@@ -54,4 +77,6 @@ class DictionaryTest {
 //        var WordValidator = new WordValidator();
 //        assertFalse(WordValidator.isValidWord("applie"));
 //    }
+
+
 }
