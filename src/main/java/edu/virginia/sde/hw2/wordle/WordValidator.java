@@ -7,7 +7,7 @@ package edu.virginia.sde.hw2.wordle;
  * &nbsp;&nbsp;&nbsp;&nbsp;2) The word is made up of English letters (see {@link WordValidator#isAllLetters(String)})<br>
  * Validity is checked whenever a word is added to a {@link Dictionary} object. See {@link Dictionary#addWord(String)}.
  */
-public class WordValidator {
+public class WordValidator {        //DONE - DON'T CHANGE
 
     public static final int WORDLE_WORD_LENGTH = 5;
 

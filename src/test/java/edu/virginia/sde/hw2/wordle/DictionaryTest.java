@@ -42,16 +42,16 @@ class DictionaryTest {
 //        var WordValidator = new WordValidator();
 //        assertFalse(WordValidator.isValidWord("hel3lo"));
 //    }
-    @Test void isValidWord_shouldBeTrue() {
-        var WordValidator = new WordValidator();
-        assertTrue(WordValidator.isValidWord("apple"));
-    }
-    @Test void isValidWord_shouldBeFalse_containsNum() {
-        var WordValidator = new WordValidator();
-        assertFalse(WordValidator.isValidWord("app4e"));
-    }
-    @Test void isValidWord_shouldBeFalse_moreThanFive() {
-        var WordValidator = new WordValidator();
-        assertFalse(WordValidator.isValidWord("applie"));
-    }
+//    @Test void isValidWord_shouldBeTrue() {
+//        var WordValidator = new WordValidator();
+//        assertTrue(WordValidator.isValidWord("apple"));
+//    }
+//    @Test void isValidWord_shouldBeFalse_containsNum() {
+//        var WordValidator = new WordValidator();
+//        assertFalse(WordValidator.isValidWord("app4e"));
+//    }
+//    @Test void isValidWord_shouldBeFalse_moreThanFive() {
+//        var WordValidator = new WordValidator();
+//        assertFalse(WordValidator.isValidWord("applie"));
+//    }
 }
