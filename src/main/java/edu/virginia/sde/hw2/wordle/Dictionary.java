@@ -35,7 +35,7 @@ public class Dictionary {
      * ensure that all members of the set are lower-case, and that the set object is mutable.
      */
 
-    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {
+    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {    //working
         validateWordSet(wordSet, wordValidator);
         this.wordSet = wordSet;
         this.wordValidator = wordValidator;
@@ -89,12 +89,12 @@ public class Dictionary {
      *
      * @throws IllegalArgumentException if the word is not valid (see {@link WordValidator#isValidWord(String)}
      */
-    public void addWord(String word) {          //should check
+    public void addWord(String word) {                  //working
         if (!wordValidator.isValidWord(word)) {
             throw new IllegalArgumentException(
                     String.format("Cannot add %s to dictionary, as it is invalid for Wordle", word));
         }
-        wordSet.add(word);
+        wordSet.add(word.toLowerCase());
     }
 
 

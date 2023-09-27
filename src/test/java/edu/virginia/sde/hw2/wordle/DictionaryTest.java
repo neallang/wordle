@@ -46,6 +46,12 @@ class DictionaryTest {
 //        dictionary.addWord("hello3");
 //        assertEquals(1, dictionary.size());
 //    }
+    @Test void contains_caseCheck(){
+        var startingWordSet = new HashSet<>(Set.of("apple"));
+        var dictionary = new Dictionary(startingWordSet, new WordValidator());
+        dictionary.addWord("hello");
+        assertTrue(dictionary.contains("HElLo"));
+    }
 
 
 
