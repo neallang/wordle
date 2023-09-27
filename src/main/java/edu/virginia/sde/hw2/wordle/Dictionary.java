@@ -35,13 +35,13 @@ public class Dictionary {
      * ensure that all members of the set are lower-case, and that the set object is mutable.
      */
 
-    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {
+    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {    //may need to come back
         validateWordSet(wordSet, wordValidator);
         this.wordSet = wordSet;
         this.wordValidator = wordValidator;
     }
 
-    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {
+    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {    //might be wrong
         for (String word: wordSet) {
             if (!wordValidator.isValidWord(word)) {
                 throw new IllegalArgumentException(
@@ -54,7 +54,6 @@ public class Dictionary {
             }
         }
     }
-
 
     /**
      * Returns an immutable set of words in the dictionary
@@ -90,11 +89,14 @@ public class Dictionary {
      * @throws IllegalArgumentException if the word is not valid (see {@link WordValidator#isValidWord(String)}
      */
     public void addWord(String word) {
+        word = word.toLowerCase();
         if (!wordValidator.isValidWord(word)) {
             throw new IllegalArgumentException(
                     String.format("Cannot add %s to dictionary, as it is invalid for Wordle", word));
         }
-        wordSet.add(word);
+        else {
+            wordSet.add(word);
+        }
     }
 
 
@@ -142,7 +144,7 @@ public class Dictionary {
      * Returns true if both dictionaries have the same set of words.
      */
     @Override
-    public boolean equals(Object object) {
+    public boolean equals(Object object) {      //should test
         if (!(object instanceof Dictionary otherDictionary)) {
             return false;
         }

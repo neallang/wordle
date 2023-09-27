@@ -7,7 +7,7 @@ package edu.virginia.sde.hw2.wordle;
  * &nbsp;&nbsp;&nbsp;&nbsp;2) The word is made up of English letters (see {@link WordValidator#isAllLetters(String)})<br>
  * Validity is checked whenever a word is added to a {@link Dictionary} object. See {@link Dictionary#addWord(String)}.
  */
-public class WordValidator {
+public class WordValidator {        //DONE - DON'T CHANGE
 
     public static final int WORDLE_WORD_LENGTH = 5;
 
@@ -18,7 +18,7 @@ public class WordValidator {
      * &nbsp;&nbsp;&nbsp;&nbsp;2) The word is made up of English letters (see {@link WordValidator#isAllLetters(String)})<br>
      * Returns false if *either* condition is false.
      */
-    public boolean isValidWord(String word) {
+    public boolean isValidWord(String word) {   //might have to throw an exception for false
         return isCorrectLength(word) && isAllLetters(word);
     }
 
@@ -26,7 +26,7 @@ public class WordValidator {
      * Returns true if the word is the correct length
      */
     protected boolean isCorrectLength(String word) {
-        return word.length() != WORDLE_WORD_LENGTH;
+        return word.length() == WORDLE_WORD_LENGTH; //SHOULD BE ==
     }
 
     /**
@@ -36,7 +36,7 @@ public class WordValidator {
         word.toLowerCase();
         for (int index = 0; index < word.length(); index++) {
             var character = word.charAt(index);
-            if (character > 'a' || character < 'z') {
+            if (!Character.isLetter(character)) {
                 return false;
             }
         }
