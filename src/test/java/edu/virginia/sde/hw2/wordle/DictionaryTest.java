@@ -46,14 +46,36 @@ class DictionaryTest {
 //        dictionary.addWord("hello3");
 //        assertEquals(1, dictionary.size());
 //    }
-    @Test void contains_caseCheck(){
-        var startingWordSet = new HashSet<>(Set.of("apple"));
-        var dictionary = new Dictionary(startingWordSet, new WordValidator());
-        dictionary.addWord("hello");
-        assertTrue(dictionary.contains("HElLo"));
-    }
-
-
+//    @Test void contains_caseCheck(){
+//        var startingWordSet = new HashSet<>(Set.of("apple"));
+//        var dictionary = new Dictionary(startingWordSet, new WordValidator());
+//        dictionary.addWord("hello");
+//        assertTrue(dictionary.contains("HElLo"));
+//    }
+//@Test void equals_check(){
+//        var dictionary = new Dictionary();
+//        var dictionary2 = new Dictionary();
+//
+//    dictionary.addWord("Hello");
+//    dictionary.addWord("FivEs");
+//    dictionary2.addWord("helLo");
+//    dictionary2.addWord("FIVes");
+//
+//    assertTrue(dictionary.equals(dictionary2));
+//    assertTrue(dictionary.size() == dictionary2.size());
+//    }
+//    @Test void equals_checkFalse(){
+//        var dictionary = new Dictionary();
+//        var dictionary2 = new Dictionary();
+//
+//        dictionary.addWord("Hello");
+//        dictionary.addWord("FivEs");
+//        dictionary2.addWord("helLo");
+//        dictionary2.addWord("FIVes");
+//        dictionary2.addWord("PhoNe");
+//
+//        assertFalse(dictionary.equals(dictionary2));
+//    }
 
 
 

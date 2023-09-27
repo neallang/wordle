@@ -18,7 +18,7 @@ public class WordValidator {        //DONE - DON'T CHANGE
      * &nbsp;&nbsp;&nbsp;&nbsp;2) The word is made up of English letters (see {@link WordValidator#isAllLetters(String)})<br>
      * Returns false if *either* condition is false.
      */
-    public boolean isValidWord(String word) {
+    public boolean isValidWord(String word) {   //might have to throw an exception for false
         return isCorrectLength(word) && isAllLetters(word);
     }
 

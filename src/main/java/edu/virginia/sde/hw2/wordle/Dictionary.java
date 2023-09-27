@@ -90,11 +90,14 @@ public class Dictionary {
      * @throws IllegalArgumentException if the word is not valid (see {@link WordValidator#isValidWord(String)}
      */
     public void addWord(String word) {                  //working
+        word = word.toLowerCase();
         if (!wordValidator.isValidWord(word)) {
             throw new IllegalArgumentException(
                     String.format("Cannot add %s to dictionary, as it is invalid for Wordle", word));
         }
-        wordSet.add(word.toLowerCase());
+        else {
+            wordSet.add(word);
+        }
     }
 
 
