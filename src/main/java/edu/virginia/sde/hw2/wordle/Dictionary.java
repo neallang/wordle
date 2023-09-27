@@ -55,7 +55,6 @@ public class Dictionary {
         }
     }
 
-
     /**
      * Returns an immutable set of words in the dictionary
      */
