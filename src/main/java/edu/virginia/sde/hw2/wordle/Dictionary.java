@@ -35,13 +35,13 @@ public class Dictionary {
      * ensure that all members of the set are lower-case, and that the set object is mutable.
      */
 
-    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {    //working
+    protected Dictionary(Set<String> wordSet, WordValidator wordValidator) {    //may need to come back
         validateWordSet(wordSet, wordValidator);
         this.wordSet = wordSet;
         this.wordValidator = wordValidator;
     }
 
-    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {    //should check
+    private void validateWordSet(Set<String> wordSet, WordValidator wordValidator) {    //might be wrong
         for (String word: wordSet) {
             if (!wordValidator.isValidWord(word)) {
                 throw new IllegalArgumentException(
@@ -89,7 +89,7 @@ public class Dictionary {
      *
      * @throws IllegalArgumentException if the word is not valid (see {@link WordValidator#isValidWord(String)}
      */
-    public void addWord(String word) {                  //working
+    public void addWord(String word) {
         word = word.toLowerCase();
         if (!wordValidator.isValidWord(word)) {
             throw new IllegalArgumentException(
