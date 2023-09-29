@@ -14,7 +14,8 @@ public class GuessResult {
 
     /**
      * Constructor for GuessResult
-     * @param guess - the Wordle player's guessed word
+     *
+     * @param guess  - the Wordle player's guessed word
      * @param answer - the word the player is trying to guess
      * @throws IllegalArgumentException if either word is not 5-characters long.
      */
@@ -53,10 +54,9 @@ public class GuessResult {
      * Returns true if the player's guess matches the answer (case-insensitive)
      */
     public boolean isCorrect() {
-        if(this.guess.equals(this.answer)){
+        if (this.guess.equals(this.answer)) {
             return true;
-        }
-        else{
+        } else {
             return false;
         }
     }
@@ -68,7 +68,7 @@ public class GuessResult {
     public LetterResult[] getLetterResults() {
         //TODO: Stub
         return null;
+
+
     }
-
-
 }
