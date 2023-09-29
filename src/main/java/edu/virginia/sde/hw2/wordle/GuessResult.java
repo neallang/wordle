@@ -77,8 +77,14 @@ public class GuessResult {
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
             }
+            if(!answer.contains(String.valueOf(guessLetter))){
+                returnList[i] = GRAY;
+
+            }
 
         }
+
+
 return returnList;
 
     }
