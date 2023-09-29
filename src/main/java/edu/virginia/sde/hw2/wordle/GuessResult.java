@@ -23,9 +23,12 @@ public class GuessResult {
      */
     public GuessResult(String guess, String answer) {
         validateWordLengths(guess, answer);
+
         this.guess = guess;
         this.answer = answer;
     }
+
+
 
     private static void validateWordLengths(String guess, String answer) {
         if (guess.length() != WordValidator.WORDLE_WORD_LENGTH || answer.length() != WordValidator.WORDLE_WORD_LENGTH) {
