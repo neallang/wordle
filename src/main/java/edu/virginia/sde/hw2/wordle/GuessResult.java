@@ -53,7 +53,12 @@ public class GuessResult {
      * Returns true if the player's guess matches the answer (case-insensitive)
      */
     public boolean isCorrect() {
-        return false;
+        if(this.guess.equals(this.answer)){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     /**
