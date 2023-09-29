@@ -91,6 +91,7 @@ public class GuessResult {
             char guessLetter = guess.charAt(i);
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
+                letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
 
             }
             if (!answer.contains(String.valueOf(guessLetter))) {
