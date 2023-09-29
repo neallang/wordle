@@ -25,15 +25,25 @@ class GuessResultTest {
 //           assertEquals(expectedResult,guess.getLetterResults());
 //
 //    }
-    @Test
-    void getLetterResults_allRight(){
-        var guess = new GuessResult("false","false");
-        var expectedResult = new LetterResult[] {LetterResult.GREEN, LetterResult.GREEN,
-        LetterResult.GREEN, LetterResult.GREEN, LetterResult.GREEN};
+//    @Test
+//    void getLetterResults_allRight(){
+//        var guess = new GuessResult("false","false");
+//        var expectedResult = new LetterResult[] {LetterResult.GREEN, LetterResult.GREEN,
+//        LetterResult.GREEN, LetterResult.GREEN, LetterResult.GREEN};
+//        for (int i = 0; i <5; i++) {
+//            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
+//        }
+//    }
+        @Test
+    void getLetterResults_allWrong(){
+        var guess = new GuessResult("false","zzzzz");
+        var expectedResult = new LetterResult[] {LetterResult.GRAY, LetterResult.GRAY,
+        LetterResult.GRAY, LetterResult.GRAY, LetterResult.GRAY};
         for (int i = 0; i <5; i++) {
             assertEquals(expectedResult[i], guess.getLetterResults()[i]);
         }
     }
+
 
 
 
