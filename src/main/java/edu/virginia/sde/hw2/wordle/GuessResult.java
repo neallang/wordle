@@ -101,6 +101,9 @@ public class GuessResult {
                     returnList[i] = YELLOW;
                     letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
                 }
+                else {
+                    returnList[i] = GRAY; //may not be gray
+                }
 
             }
                 else {
