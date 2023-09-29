@@ -79,11 +79,20 @@ class GuessResultTest {
 //            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
 //        }
 //    }
+//    @Test
+//    void getLetterResults_grayBeforeGreen(){
+//        var guess = new GuessResult("leave","close");
+//        var expectedResult = new LetterResult[] {LetterResult.YELLOW, LetterResult.GRAY,
+//                LetterResult.GRAY, LetterResult.GRAY, LetterResult.GREEN};
+//        for (int i = 0; i <5; i++) {
+//            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
+//        }
+//    }
     @Test
-    void getLetterResults_grayBeforeGreen(){
-        var guess = new GuessResult("leave","close");
-        var expectedResult = new LetterResult[] {LetterResult.YELLOW, LetterResult.GRAY,
-                LetterResult.GRAY, LetterResult.GRAY, LetterResult.GREEN};
+    void getLetterResults_invalidInputs(){
+        var guess = new GuessResult("meme5","mommy");
+        var expectedResult = new LetterResult[] {LetterResult.GREEN, LetterResult.GRAY,
+                LetterResult.GREEN, LetterResult.YELLOW, LetterResult.YELLOW};
         for (int i = 0; i <5; i++) {
             assertEquals(expectedResult[i], guess.getLetterResults()[i]);
         }

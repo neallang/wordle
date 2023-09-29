@@ -89,6 +89,7 @@ public class GuessResult {
         for (int i = 0; i < 5; i++) {
             char answerLetter = answer.charAt(i);
             char guessLetter = guess.charAt(i);
+
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
                 letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
