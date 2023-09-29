@@ -1,6 +1,7 @@
 package edu.virginia.sde.hw2.wordle;
 
 import java.util.Arrays;
+import java.util.Objects;
 
 import static edu.virginia.sde.hw2.wordle.LetterResult.*;
 
@@ -67,8 +68,18 @@ public class GuessResult {
      */
     public LetterResult[] getLetterResults() {
         //TODO: Stub
-        return null;
+        String guess = getGuess();
+        String answer = getAnswer();
+        LetterResult[] returnList = new LetterResult[5];
+        for (int i = 0; i < 5; i++) {
+            char answerLetter = answer.charAt(i);
+            char guessLetter = guess.charAt(i);
+            if (guessLetter == answerLetter) {
+                returnList[i] = GREEN;
+            }
 
+        }
+return returnList;
 
     }
 }

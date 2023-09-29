@@ -30,7 +30,9 @@ class GuessResultTest {
         var guess = new GuessResult("false","false");
         var expectedResult = new LetterResult[] {LetterResult.GREEN, LetterResult.GREEN,
         LetterResult.GREEN, LetterResult.GREEN, LetterResult.GREEN};
-        assertEquals(expectedResult,guess.getLetterResults());
+        for (int i = 0; i <5; i++) {
+            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
+        }
     }
 
 
