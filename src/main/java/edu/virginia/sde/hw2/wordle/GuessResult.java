@@ -96,7 +96,7 @@ public class GuessResult {
                 returnList[i] = GRAY;
             }
 
-            if (letterMap.containsKey(guessLetter) && returnList[i] != GREEN) {
+            if (letterMap.containsKey(guessLetter)) {
                 if (letterMap.get(guessLetter) >= 1) {
                     returnList[i] = YELLOW;
                     letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
