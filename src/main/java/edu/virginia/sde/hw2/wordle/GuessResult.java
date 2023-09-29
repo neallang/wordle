@@ -23,9 +23,19 @@ public class GuessResult {
      */
     public GuessResult(String guess, String answer) {
         validateWordLengths(guess, answer);
-
+        validateAllLetters(guess, answer);
         this.guess = guess;
         this.answer = answer;
+    }
+    public static void validateAllLetters(String guess, String answer) {
+    for (int i=0; i <5; i++) {
+        if (!Character.isLetter(guess.charAt(i))) {
+            throw new IllegalArgumentException("The guess contains an invalid input: " + guess.charAt(i));
+        }
+        if (!Character.isLetter(answer.charAt(i))) {
+            throw new IllegalArgumentException("The answer contains an invalid input: " + answer.charAt(i));
+        }
+    }
     }
 
 
