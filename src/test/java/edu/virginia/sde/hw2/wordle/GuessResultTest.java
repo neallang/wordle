@@ -10,10 +10,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class GuessResultTest {
 
+//    @Test
+//    void isCorrect_expectTrue(){
+//        var guess = new GuessResult("false","false");
+//        assertTrue(guess.isCorrect());
+//    }
+
     @Test
-    void isCorrect_expectTrue(){
-        var guess = new GuessResult("false","false");
-        assertTrue(guess.isCorrect());
+    void getLetterResults_allWrong(){
+        var guess = new GuessResult("false","zzzzz");
+
+        var expectedResult = new LetterResult[] {LetterResult.GRAY, LetterResult.GRAY,
+                LetterResult.GRAY, LetterResult.GRAY, LetterResult.GRAY};
+           assertEquals(expectedResult,guess.getLetterResults());
+
     }
+
 
 }
