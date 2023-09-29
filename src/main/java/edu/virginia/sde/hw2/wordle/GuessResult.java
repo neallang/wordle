@@ -1,6 +1,7 @@
 package edu.virginia.sde.hw2.wordle;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Objects;
 
 import static edu.virginia.sde.hw2.wordle.LetterResult.*;
@@ -62,6 +63,20 @@ public class GuessResult {
         }
     }
 
+    public HashMap<Character,Integer> letterCounter(String answer){
+        HashMap<Character,Integer> numLetterCount = new HashMap<>();
+        for(int i = 0; i < 5; i++){
+            char letter = answer.charAt(i);
+            if(!numLetterCount.containsKey(letter)){
+                numLetterCount.put(letter,1);
+            }
+            else{
+                numLetterCount.put(letter, numLetterCount.get(letter) + 1); //second param represents number of occurences
+            }
+        }
+        return numLetterCount;
+    }
+
     /**
      * Returns the {@link LetterResult} array of GREEN, YELLOW, and GRAY based on how well the player's guess. This
      * function is case-insensitive.
@@ -71,6 +86,7 @@ public class GuessResult {
         String guess = getGuess();
         String answer = getAnswer();
         LetterResult[] returnList = new LetterResult[5];
+        HashMap<Character, Integer> letterMap = letterCounter(answer);
         for (int i = 0; i < 5; i++) {
             char answerLetter = answer.charAt(i);
             char guessLetter = guess.charAt(i);
@@ -79,8 +95,20 @@ public class GuessResult {
             }
             if(!answer.contains(String.valueOf(guessLetter))){
                 returnList[i] = GRAY;
-
             }
+
+            if(letterMap.containsKey(guessLetter)) {
+                if (letterMap.get(guessLetter) == 1) {
+                    returnList[i] = YELLOW;
+                }
+            }
+            else{
+                returnList[i] = GRAY; //may not be gray
+            }
+
+
+
+
 
         }
 
