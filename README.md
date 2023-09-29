@@ -24,4 +24,7 @@ List the primary contributions of each author. It is recommended to update this 
 
 ## Issues
 
-List any known issues (bugs, incorrect behavior, etc.) at the time of submission.
+This is not necessarily an issue, but an assumption. We noticed that the validateWordLengths() method is void, and thus cannot be checked by the constructor. We wanted to say if there is an invalid length,
+do not set the guess/answer. However, given that this method is void and the method signature cannot be altered, we left it so it throws an exception but still sets the guess/answer (no other option). We carried
+the same logic over for our validateAllLetters() method, which is very similar but simply ensures that everything is a letter. Please understand this as we wanted to change validateWordLengths() to return a boolean
+but had no other choice. We had a very similar situation for the dictionary constructor (calling the validateWordSet() method) so please refer to this note for that as well. Thank you!
