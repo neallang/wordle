@@ -88,17 +88,14 @@ class GuessResultTest {
 //            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
 //        }
 //    }
-//    @Test
-//    void constructor_invalidInputs(){
-//        var guess = new GuessResult("meme5","close");
-//        assertNull(guess.getGuess());
-//
-//    }
-@Test
-void constructor_tooLong(){
-    var guess = new GuessResult("meme54","clos5");
-}
-
+//@Test
+//void constructor_tooLong(){
+//    var guess = new GuessResult("meme54","clos5");
+//}
+    @Test
+    void constructor_invalidInputs(){
+        var guess = new GuessResult("meme5","clos5");
+    }
 
 
 
