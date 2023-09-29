@@ -95,7 +95,7 @@ class GuessResultTest {
 //
 //    }
 @Test
-void constructor_invalidInputs(){
+void constructor_tooLong(){
     var guess = new GuessResult("meme54","clos5");
 }
 
