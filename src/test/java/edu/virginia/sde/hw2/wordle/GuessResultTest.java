@@ -89,13 +89,10 @@ class GuessResultTest {
 //        }
 //    }
     @Test
-    void getLetterResults_invalidInputs(){
-        var guess = new GuessResult("meme5","mommy");
-        var expectedResult = new LetterResult[] {LetterResult.GREEN, LetterResult.GRAY,
-                LetterResult.GREEN, LetterResult.YELLOW, LetterResult.YELLOW};
-        for (int i = 0; i <5; i++) {
-            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
-        }
+    void constructor_invalidInputs(){
+        var guess = new GuessResult("meme5","close");
+        assertNull(guess.getGuess());
+
     }
 
 

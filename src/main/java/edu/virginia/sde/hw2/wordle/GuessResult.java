@@ -89,9 +89,6 @@ public class GuessResult {
         for (int i = 0; i < 5; i++) {
             char answerLetter = answer.charAt(i);
             char guessLetter = guess.charAt(i);
-            if (!Character.isLetter(guessLetter)) {
-                throw new IllegalArgumentException("The following character is not a latter: " + guessLetter);
-            }
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
                 letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
