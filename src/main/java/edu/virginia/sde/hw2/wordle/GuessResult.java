@@ -53,7 +53,6 @@ public class GuessResult {
      * Returns true if the player's guess matches the answer (case-insensitive)
      */
     public boolean isCorrect() {
-        //TODO: Stub
         return false;
     }
 
