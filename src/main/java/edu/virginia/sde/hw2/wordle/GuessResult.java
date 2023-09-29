@@ -63,14 +63,13 @@ public class GuessResult {
         }
     }
 
-    public HashMap<Character,Integer> letterCounter(String answer){
-        HashMap<Character,Integer> numLetterCount = new HashMap<>();
-        for(int i = 0; i < 5; i++){
+    public HashMap<Character, Integer> letterCounter(String answer) {
+        HashMap<Character, Integer> numLetterCount = new HashMap<>();
+        for (int i = 0; i < 5; i++) {
             char letter = answer.charAt(i);
-            if(!numLetterCount.containsKey(letter)){
-                numLetterCount.put(letter,1);
-            }
-            else{
+            if (!numLetterCount.containsKey(letter)) {
+                numLetterCount.put(letter, 1);
+            } else {
                 numLetterCount.put(letter, numLetterCount.get(letter) + 1); //second param represents number of occurences
             }
         }
@@ -93,29 +92,23 @@ public class GuessResult {
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
             }
-            if(!answer.contains(String.valueOf(guessLetter))){
+            if (!answer.contains(String.valueOf(guessLetter))) {
                 returnList[i] = GRAY;
             }
 
-            if(letterMap.containsKey(guessLetter)) {
+            if (letterMap.containsKey(guessLetter)) {
                 if (letterMap.get(guessLetter) >= 1) {
                     returnList[i] = YELLOW;
-                    letterMap.put(guessLetter, letterMap.get(guessLetter) -1);
+                    letterMap.put(guessLetter, letterMap.get(guessLetter) - 1);
                 }
 
             }
-            else{
-                returnList[i] = GRAY; //may not be gray
+                else {
+                    returnList[i] = GRAY; //may not be gray
+                }
+
+
             }
-
-
-
-
-
+        return returnList;
         }
-
-
-return returnList;
-
-    }
 }

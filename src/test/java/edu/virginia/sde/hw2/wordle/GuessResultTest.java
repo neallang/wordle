@@ -52,9 +52,18 @@ class GuessResultTest {
 //            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
 //        }
 //    }
+//    @Test
+//    void getLetterResults_multipleYellow(){
+//        var guess = new GuessResult("pxxpx","apple");
+//        var expectedResult = new LetterResult[] {LetterResult.YELLOW, LetterResult.GRAY,
+//                LetterResult.GRAY, LetterResult.YELLOW, LetterResult.GRAY};
+//        for (int i = 0; i <5; i++) {
+//            assertEquals(expectedResult[i], guess.getLetterResults()[i]);
+//        }
+//}
     @Test
-    void getLetterResults_multipleYellow(){
-        var guess = new GuessResult("pxxpx","apple");
+    void getLetterResults_tooManyYellow(){
+        var guess = new GuessResult("pxxpp","apple");
         var expectedResult = new LetterResult[] {LetterResult.YELLOW, LetterResult.GRAY,
                 LetterResult.GRAY, LetterResult.YELLOW, LetterResult.GRAY};
         for (int i = 0; i <5; i++) {
