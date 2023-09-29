@@ -91,6 +91,7 @@ public class GuessResult {
             char guessLetter = guess.charAt(i);
             if (guessLetter == answerLetter) {
                 returnList[i] = GREEN;
+
             }
             if (!answer.contains(String.valueOf(guessLetter))) {
                 returnList[i] = GRAY;
