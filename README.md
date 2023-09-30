@@ -7,14 +7,14 @@
 
 ## To Run
 
-[Add a brief description of how to build and run your .jar file based on this code]
+Run the PlayWordle.java file.
 
 ## Contributions
 
 List the primary contributions of each author. It is recommended to update this with your contributions after each coding session.:
 
 ### Neal Langhorne
-* to be entered
+* Completed part 1
 
 ### [Author 2 - replace this with their name]
 
@@ -32,3 +32,6 @@ but had no other choice. We had a very similar situation for the dictionary cons
 2. Another note to leave is that we wrote a few tests that were specifically designed to fail. However, we noticed on the instructions that all tests should be passing when run, so we commented these out and
 left a note that these tests were designed to fail. Thank you!
 
+3. Our commit history may look quite lopsided, but the two of us worked on the entire assignment together. We worked on Neal's computer for part 1 and Danny's computer for parts 2 & 3. Thank you!
+
+4. Final assumption: no need to build a .jar file as this was nowhere on the instruction document. Thank you!
