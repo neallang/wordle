@@ -8,7 +8,15 @@ Answer these questions thoroughly after completing the assignment, using example
 
 ## Answer
 
-[Your team answer goes here]
+Equivalence Partitions:
+- line 66: public void submitGuess_ensureDecrement() - expected: 4, actual: game.getGuessesRemaining(); inputs: var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING); game.submitGuess("poops");
+- line 72: public void  submitGuess_ensurePlaying() - expected: PLAYING, actual: game.getGameStatus(); inputs: var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING); game.submitGuess("poops");
+
+Exception Partitions:
+- line 45:  public void submitGuess_gameLost() - expected and receieved a GameAlreadyOverException.  inputs: var game = new Game(defaultGuessesDictionary, "TREND", 0, LOSS);  game.submitGuess("poops");
+- line 50:   public void submitGuess_gameWon() - expected and receieved a GameAlreadyOverException.  inputs: var game = new Game(defaultGuessesDictionary, "TREND", 0, WIN); game.submitGuess("TREnd");
+- line 56:  public void submitGuess_illegalWord() - expected and receieved a IllegalWordException.  inputs: var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING); game.submitGuess("aaaaa");
+  
 
 ## Question 2
 
@@ -16,4 +24,7 @@ The function submitGuess(String) in WordleGameState can throw two different Exce
 
 ## Answer
 
-[Your team answer goes here]
+Exceptions are used to provide the user with a meaningful message rather than presenting them with long error codes. If the message is meaningful, it provides the user with the exact problem with their
+input and should only affect corresponding areas of code. Thus, they can easily learn from their mistake and re-enter an input. Exceptions are also very useful for a programmer when testing as they can
+help identify errors and where those errors occur. This can be very useful in large projects and when other programmers are using someone else's code. Overall, exceptions provide a much cleaner and more
+concise way to handle user errors.
