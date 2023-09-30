@@ -3,25 +3,33 @@
 
 ## Authors
 1) Neal Langhorne, yhn5yh, neallang
-2) Name, netid, [GitHub profile name]
+2) Danny Know, msv7hq, dknow17
 
 ## To Run
 
-[Add a brief description of how to build and run your .jar file based on this code]
+Run the PlayWordle.java file.
 
 ## Contributions
 
 List the primary contributions of each author. It is recommended to update this with your contributions after each coding session.:
 
 ### Neal Langhorne
-* to be entered
+* Completed part 1
 
-### [Author 2 - replace this with their name]
-
-* Author 2 contributions
-* as a bulleted list
-* each line starts with an asterisk and a space
+### Danny Know
+* Completed part 2
+* Completed part 3
 
 ## Issues
 
-List any known issues (bugs, incorrect behavior, etc.) at the time of submission.
+1. This is not necessarily an issue, but an assumption. We noticed that the validateWordLengths() method is void, and thus cannot be checked by the constructor. We wanted to say if there is an invalid length,
+do not set the guess/answer. However, given that this method is void and the method signature cannot be altered, we left it so it throws an exception but still sets the guess/answer (no other option). We carried
+the same logic over for our validateAllLetters() method, which is very similar but simply ensures that everything is a letter. Please understand this as we wanted to change validateWordLengths() to return a boolean
+but had no other choice. We had a very similar situation for the dictionary constructor (calling the validateWordSet() method) so please refer to this note for that as well.  Thank you!
+
+2. Another note to leave is that we wrote a few tests that were specifically designed to fail. However, we noticed on the instructions that all tests should be passing when run, so we commented these out and
+left a note that these tests were designed to fail. Thank you!
+
+3. Our commit history may look quite lopsided, but the two of us worked on the entire assignment together. We worked on Neal's computer for part 1 and Danny's computer for parts 2 & 3. Thank you!
+
+4. Final assumption: no need to build a .jar file as this was nowhere on the instruction document. Thank you!
