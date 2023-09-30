@@ -129,7 +129,7 @@ public class Game {
             throw new GameAlreadyOverException("The game is already over. You won!");
         }
         else if (!guessDictionary.contains(guess)) {
-            throw new IllegalWordException(guess + "is not in the valid guess dictionary.");
+            throw new IllegalWordException("'"+ guess + "'" + " is not in the valid guess dictionary.");
         }
         else if (guessResult.getGuess().equals(guessResult.getAnswer())) {
             gameStatus = WIN;

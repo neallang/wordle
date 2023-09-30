@@ -46,9 +46,15 @@ class GameTest {
 //        var game = new Game(defaultGuessesDictionary, "TREND", 0, LOSS);
 //        game.submitGuess("poops");
 //    }
+//    @Test
+//    public void submitGuess_gameWon() {
+//        var game = new Game(defaultGuessesDictionary, "TREND", 0, WIN);
+//        game.submitGuess("TREnd");
+//    }
+//}
     @Test
-    public void submitGuess_gameWon() {
-        var game = new Game(defaultGuessesDictionary, "TREND", 0, WIN);
-        game.submitGuess("TREnd");
+    public void submitGuess_illegalWord() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING);
+        game.submitGuess("aaaaa");
     }
 }
