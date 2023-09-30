@@ -42,24 +42,24 @@ class GameTest {
         assertTrue(game.isGameOver());
     }
 //    @Test
-//    public void submitGuess_gameLost() {
+//    public void submitGuess_gameLost() {      //TEST SHOULD ALWAYS FAIL
 //        var game = new Game(defaultGuessesDictionary, "TREND", 0, LOSS);
 //        game.submitGuess("poops");
 //    }
 //    @Test
-//    public void submitGuess_gameWon() {
+//    public void submitGuess_gameWon() {       //TEST SHOULD ALWAYS FAIL
 //        var game = new Game(defaultGuessesDictionary, "TREND", 0, WIN);
 //        game.submitGuess("TREnd");
 //    }
 //}
 //    @Test
-//    public void submitGuess_illegalWord() {
+//    public void submitGuess_illegalWord() {   //TEST SHOULD ALWAYS FAIL
 //        var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING);
 //        game.submitGuess("aaaaa");
 //    }
     @Test
-    public void submitGuess_wonBeforeGuessesZero() {
-        var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING);
-        game.submitGuess("TREND");
+    public void submitGuess_noGuessesLeftWhilePlaying() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 1, PLAYING);
+        game.submitGuess("poops");
     }
 }
