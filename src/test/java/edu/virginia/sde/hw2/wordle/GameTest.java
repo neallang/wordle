@@ -52,9 +52,14 @@ class GameTest {
 //        game.submitGuess("TREnd");
 //    }
 //}
+//    @Test
+//    public void submitGuess_illegalWord() {
+//        var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING);
+//        game.submitGuess("aaaaa");
+//    }
     @Test
-    public void submitGuess_illegalWord() {
-        var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING);
-        game.submitGuess("aaaaa");
+    public void submitGuess_wonBeforeGuessesZero() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING);
+        game.submitGuess("TREND");
     }
 }
