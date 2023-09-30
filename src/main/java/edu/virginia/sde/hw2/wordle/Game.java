@@ -121,7 +121,6 @@ public class Game {
     public GuessResult submitGuess(String guess) {
         //TODO: Stub
         var guessResult = new GuessResult(guess, answer);
-        guessesRemaining -= 1;
         if (getGameStatus().equals(LOSS)) {
             throw new GameAlreadyOverException("The game is already over. You lost.");
         }
@@ -131,7 +130,8 @@ public class Game {
         else if (!guessDictionary.contains(guess)) {
             throw new IllegalWordException("'"+ guess + "'" + " is not in the valid guess dictionary.");
         }
-        else if (guessResult.getGuess().equals(guessResult.getAnswer())) {
+        guessesRemaining -= 1;
+        if (guessResult.getGuess().equals(guessResult.getAnswer())) {
             gameStatus = WIN;
             guessesRemaining = 0;
             System.out.println("Congratulations, you win! The final answer was: " + answer);
