@@ -57,17 +57,17 @@ class GameTest {
 //        var game = new Game(defaultGuessesDictionary, "TREND", 2, PLAYING);
 //        game.submitGuess("aaaaa");
 //    }
-//    @Test
-//    public void submitGuess_noGuessesLeftWhilePlaying() {
-//        var game = new Game(defaultGuessesDictionary, "TREND", 1, PLAYING);
-//        game.submitGuess("poops");
-//    }
-//    @Test
-//    public void submitGuess_ensureDecrement() {
-//        var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING);
-//        game.submitGuess("poops");
-//        assertEquals(4,game.getGuessesRemaining());
-//    }
+    @Test
+    public void submitGuess_noGuessesLeftWhilePlaying() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 1, PLAYING);
+        game.submitGuess("poops");
+    }
+    @Test
+    public void submitGuess_ensureDecrement() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING);
+        game.submitGuess("poops");
+        assertEquals(4,game.getGuessesRemaining());
+    }
     @Test
     public void submitGuess_ensurePlaying() {
         var game = new Game(defaultGuessesDictionary, "TREND", 5, PLAYING);
