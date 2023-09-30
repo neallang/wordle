@@ -3,7 +3,7 @@
 
 ## Authors
 1) Neal Langhorne, yhn5yh, neallang
-2) Name, netid, [GitHub profile name]
+2) Danny Know, msv7hq, dknow17
 
 ## To Run
 
@@ -16,11 +16,9 @@ List the primary contributions of each author. It is recommended to update this 
 ### Neal Langhorne
 * Completed part 1
 
-### [Author 2 - replace this with their name]
-
-* Author 2 contributions
-* as a bulleted list
-* each line starts with an asterisk and a space
+### Danny Know
+* Completed part 2
+* Completed part 3
 
 ## Issues
 
