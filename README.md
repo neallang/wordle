@@ -29,3 +29,6 @@ do not set the guess/answer. However, given that this method is void and the met
 the same logic over for our validateAllLetters() method, which is very similar but simply ensures that everything is a letter. Please understand this as we wanted to change validateWordLengths() to return a boolean
 but had no other choice. We had a very similar situation for the dictionary constructor (calling the validateWordSet() method) so please refer to this note for that as well.  Thank you!
 
+2. Another note to leave is that we wrote a few tests that were specifically designed to fail. However, we noticed on the instructions that all tests should be passing when run, so we commented these out and
+left a note that these tests were designed to fail. Thank you!
+
