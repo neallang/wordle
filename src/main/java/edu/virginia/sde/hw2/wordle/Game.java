@@ -142,10 +142,6 @@ public class Game {
             System.out.println("Sorry, you lost. The final answer was: " + answer);
             return guessResult;
         }
-
-
-        //guessResult.
-
         return guessResult;
     }
 
