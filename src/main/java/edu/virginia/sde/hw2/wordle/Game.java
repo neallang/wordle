@@ -120,7 +120,33 @@ public class Game {
      */
     public GuessResult submitGuess(String guess) {
         //TODO: Stub
-        return null;
+        var guessResult = new GuessResult(guess, answer);
+        guessesRemaining -= 1;
+        if (getGameStatus().equals(LOSS)) {
+            throw new GameAlreadyOverException("The game is already over. You lost.");
+        }
+        else if (getGameStatus().equals(WIN)) {
+            throw new GameAlreadyOverException("The game is already over. You won!");
+        }
+        else if (!guessDictionary.contains(guess)) {
+            throw new IllegalWordException(guess + "is not in the valid guess dictionary.");
+        }
+        else if (guessResult.getGuess().equals(guessResult.getAnswer())) {
+            gameStatus = WIN;
+            guessesRemaining = 0;
+            System.out.println("Congratulations, you win! The final answer was: " + answer);
+            return guessResult;
+        }
+        else if(guessesRemaining == 0 && gameStatus.equals(PLAYING)){
+            gameStatus = LOSS;
+            System.out.println("Sorry, you lost. The final answer was: " + answer);
+            return guessResult;
+        }
+
+
+        //guessResult.
+
+        return guessResult;
     }
 
     private static void validate(Dictionary guessDictionary, String answer, int guessesRemaining, GameStatus gameStatus) {
