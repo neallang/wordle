@@ -41,4 +41,9 @@ class GameTest {
         assertEquals(WIN, game.getGameStatus());
         assertTrue(game.isGameOver());
     }
+    @Test
+    public void submitGuess_gameLost() {
+        var game = new Game(defaultGuessesDictionary, "TREND", 0, LOSS);
+        game.submitGuess("poops");
+    }
 }
